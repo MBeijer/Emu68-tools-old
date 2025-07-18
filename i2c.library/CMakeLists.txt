@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 project(i2c VERSION 40.0.0) # Compat version with i2clib40 from aminet
 get_verstring(VERSTRING)
+set_emu68_tools_policies()
 
 add_link_options(-ffreestanding -nostdlib -nostartfiles -Wl,-e,__start)
 add_compile_options(-Os -m68040 -fomit-frame-pointer)

@@ -1,0 +1,18 @@
+macro(set_emu68_tools_policies)
+	set(CONTRIB_PREFIX "Contrib/" PARENT_SCOPE)
+
+	if(POLICY CMP0177)
+		cmake_policy(SET CMP0177 NEW)
+	endif()
+endmacro()
+
+macro(subdir_list result curdir)
+	file(GLOB children RELATIVE ${curdir} ${curdir}/*)
+	set(dirlist "")
+	foreach(child ${children})
+		if(IS_DIRECTORY ${curdir}/${child} AND IS_READABLE ${curdir}/${child}/CMakeLists.txt)
+			list(APPEND dirlist ${child})
+		endif()
+	endforeach()
+	set(${result} ${dirlist})
+endmacro()

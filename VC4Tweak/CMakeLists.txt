@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 project(VC4Tweak VERSION 1.1.0)
 get_verstring(VERSTRING)
+set_emu68_tools_policies()
 
 add_link_options(-ffreestanding -m68030 -nostdlib -nostartfiles -Wl,-e,__start)
 add_compile_options(-Os -m68030 -fomit-frame-pointer)

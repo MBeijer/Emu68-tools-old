@@ -13,3 +13,10 @@ Detailed description of the resource will be given in corresponding AutoDoc file
 This is a device driver for SD Host Controller compatible with the official SDHC specification. Due to some internal quirks it is targeted at the Arasan controllers embedded in the Broadcom CPUs present in RaspberryPi machines. The device driver is embedded in ROM image of a virtual Zorro3 card. Once initialised, it reads the geometry of SD card, initialises physical and virtual units and subsequently adds corresponding Boot Nodes in order to make the Amiga partitions on SD card bootable.
 
 Detailed information on preparing SD card for use with this device will follow shortly.
+
+## Contribs
+
+The following are some external contributions added to the nightly builds:
+
+* Flype's contributions: https://github.com/flype44/Emu68Contribs
+* Rondoval's Genet driver: https://github.com/rondoval/emu68-genet-driver 

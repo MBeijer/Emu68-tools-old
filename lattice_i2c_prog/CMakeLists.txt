@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 project(LatticeI2cProg VERSION 1.0.0 LANGUAGES C CXX)
 get_verstring(VERSTRING)
+set_emu68_tools_policies()
 
 add_link_options(-m68020 -noixemul)
 add_compile_options(-O3 -m68020 -fomit-frame-pointer)

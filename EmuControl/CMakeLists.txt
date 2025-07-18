@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 project(EmuControl VERSION 1.5.0)
 get_verstring(VERSTRING)
+set_emu68_tools_policies()
 
 add_link_options(-ffreestanding -m68040 -nostdlib -nostartfiles -Wl,-e,__start)
 add_compile_options(-Os -m68040 -m68881 -fomit-frame-pointer)
